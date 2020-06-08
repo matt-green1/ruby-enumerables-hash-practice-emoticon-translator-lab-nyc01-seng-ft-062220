@@ -25,7 +25,7 @@ def get_japanese_emoticon(file_path, western_emoticon)
       if !emoticon_master_list.include?(western_emoticon)
         return "Sorry, that emoticon was not found"
       elsif outer_value[inner_key] == western_emoticon
-        return outer_key
+        return outer_value[:japanese]
       end
     }
   }
