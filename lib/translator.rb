@@ -20,12 +20,16 @@ def get_japanese_emoticon(file_path, western_emoticon)
       emoticon_master_list.push(inner_value)
     }
   }
+  emoticons_hash.each{|outer_key,outer_value|
+    outer_value.each{|inner_key, inner_value|
+      if !emoticon_master_list.include?(western_emoticon)
+        return "Sorry, that emoticon was not found"
+      
+      
+    }
   
-  emoticons_hash.each{|key,value|
-    if value[:english] == western_emoticon
-      return value[:japenese]
-    end
-  }
+  
+  
 end
 
 def get_english_meaning(file_path, japanese_emoticon)
