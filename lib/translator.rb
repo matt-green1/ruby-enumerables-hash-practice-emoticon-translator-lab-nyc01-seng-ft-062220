@@ -24,12 +24,11 @@ def get_japanese_emoticon(file_path, western_emoticon)
     outer_value.each{|inner_key, inner_value|
       if !emoticon_master_list.include?(western_emoticon)
         return "Sorry, that emoticon was not found"
-      
-      
+      elsif outer_value[inner_key] == japanese_emoticon
+        return outer_key
+      end
     }
-  
-  
-  
+  }
 end
 
 def get_english_meaning(file_path, japanese_emoticon)
